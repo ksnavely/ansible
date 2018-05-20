@@ -25,7 +25,7 @@ description:
       U(https://letsencrypt.org). The current implementation supports the
       C(http-01) and C(dns-01) challenges."
    - "To use this module, it has to be executed twice. Either as two
-      different tasks in the same run or during two runs. Note that the output
+      different tasks in the same run or during two runs. Note that the ofsutput
       of the first run needs to be recorded and passed to the second run as the
       module argument C(data)."
    - "Between these two tasks you have to fulfill the required steps for the
@@ -240,7 +240,7 @@ EXAMPLES = '''
   acme_certificate:
     account_key_src: /etc/pki/cert/private/account.key
     account_email: myself@sample.com
-    src: /etc/pki/cert/csr/sample.com.csr
+    csr: /etc/pki/cert/csr/sample.com.csr
     cert: /etc/httpd/ssl/sample.com.crt
     challenge: dns-01
     acme_directory: https://acme-v01.api.letsencrypt.org/directory
@@ -277,7 +277,7 @@ EXAMPLES = '''
   acme_certificate:
     account_key_src: /etc/pki/cert/private/account.key
     account_email: myself@sample.com
-    src: /etc/pki/cert/csr/sample.com.csr
+    csr: /etc/pki/cert/csr/sample.com.csr
     cert: /etc/httpd/ssl/sample.com.crt
     fullchain: /etc/httpd/ssl/sample.com-fullchain.crt
     chain: /etc/httpd/ssl/sample.com-intermediate.crt
